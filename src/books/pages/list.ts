@@ -23,7 +23,30 @@ export type BookApiEntity = {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [DevBlockComponent, JsonPipe],
   template: `
-    <p>Book list</p>
+    <div class="overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>YEAR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- row 1 -->
+          @for (book of books.value(); track book.id) {
+            <tr>
+              <th>{{ book.id }}</th>
+              <td>{{ book.title }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.year }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
 
     @defer (when isDev) {
       <app-dev-block>
