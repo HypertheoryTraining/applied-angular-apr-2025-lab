@@ -5,7 +5,7 @@ import {
   inject,
 } from '@angular/core';
 import { DevBlockComponent } from '@app-shared/components/dev-block';
-import { BookStore } from '../services/book-store';
+import { BookStore, SortByType } from '../services/book-store';
 import { SmartDatePipe } from '../pipes/smart-date-pipe';
 export type BookApiEntity = {
   author: string;
@@ -30,14 +30,14 @@ export type BookApiEntity = {
         <thead>
           <tr>
             <th>ID</th>
-            <th>TITLE</th>
-            <th>AUTHOR</th>
-            <th>YEAR</th>
+            <th class=" cursor-pointer" (click)="onSort('title')">TITLE</th>
+            <th class=" cursor-pointer" (click)="onSort('author')">AUTHOR</th>
+            <th class="cursor-pointer" (click)="onSort('year')">YEAR</th>
           </tr>
         </thead>
         <tbody>
           <!-- row 1 -->
-          @for (book of bookstore.entities().values(); track book.id) {
+          @for (book of bookstore.sortedBooks(); track book.id) {
             <tr>
               <th>{{ book.id }}</th>
               <td>{{ book.title }}</td>
@@ -62,4 +62,12 @@ export type BookApiEntity = {
 export class ListComponent {
   isDev = isDevMode();
   bookstore = inject(BookStore);
+
+  public onSort(by: SortByType) {
+    if (this.bookstore.currentlySortedBy() === by) {
+      this.bookstore.toggleSortOption(by);
+    } else if (this.bookstore.currentlySortedBy() !== by) {
+      this.bookstore.setSortOption(by);
+    }
+  }
 }
