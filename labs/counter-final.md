@@ -2,6 +2,12 @@
 
 This is the same from the other day, except I've already created the feature and the route for you.
 
+Here's a [Video](https://vimeo.com/1031643852?) of me doing this a while ago.
+
+## EXTRA CHALLENGES
+
+- Deal with the "can't decrement scenario" - it's weird that decrement button gets disabled if you aren't at 1, and your countby would take you below zero. What would be better?
+
 ## The Counter User Interface
 
 The `Counter` feature will have a new page that provides the user interface for our counter component.
