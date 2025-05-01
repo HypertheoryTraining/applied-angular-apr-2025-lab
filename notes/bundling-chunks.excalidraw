@@ -1,0 +1,1025 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "ZzZEuCTu98bsHpdh971eD",
+      "type": "text",
+      "x": 443,
+      "y": 212,
+      "width": 1107.359375,
+      "height": 400,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1601458760,
+      "version": 742,
+      "versionNonce": 1903527752,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "aVVRlPxDnleYSWRoa84A2",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1745865040915,
+      "link": null,
+      "locked": false,
+      "text": "HTML5 / Frontend Web App / Stateful App in the Browser (Angular, React, Vue, Svelte, etc.)\n    - by default, the entire application has to be \n        - downloaded for each use\n            - only download the stuff that has changed since the last visit.\n            - stuff that hasn't changed should have cache-control headers that say this is good \"forever\" (1 year)\n        - executed before the user sees ANYTHING.\n\nSSR - (Server Side Rendering) \nServer-Side Web application (PHP, Django, ASP.NET MVC (Razor Pages))\n\nNative - \n    - not cross platform (multiple versions, code bases per supported OS, etc.)\n    - electron (Node + Chromium + \"shell\") (tauri)\n    - the installation is a separate user experience from the running the application.\n\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "HTML5 / Frontend Web App / Stateful App in the Browser (Angular, React, Vue, Svelte, etc.)\n    - by default, the entire application has to be \n        - downloaded for each use\n            - only download the stuff that has changed since the last visit.\n            - stuff that hasn't changed should have cache-control headers that say this is good \"forever\" (1 year)\n        - executed before the user sees ANYTHING.\n\nSSR - (Server Side Rendering) \nServer-Side Web application (PHP, Django, ASP.NET MVC (Razor Pages))\n\nNative - \n    - not cross platform (multiple versions, code bases per supported OS, etc.)\n    - electron (Node + Chromium + \"shell\") (tauri)\n    - the installation is a separate user experience from the running the application.\n\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "aVVRlPxDnleYSWRoa84A2",
+      "type": "arrow",
+      "x": 437,
+      "y": 217.48502967119472,
+      "width": 33,
+      "height": 224.20060641222423,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 524628792,
+      "version": 469,
+      "versionNonce": 1725259336,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745865040916,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -33,
+          42.514970328805276
+        ],
+        [
+          -12,
+          224.20060641222423
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "ZzZEuCTu98bsHpdh971eD",
+        "focus": 1.0024580172689148,
+        "gap": 6
+      },
+      "endBinding": {
+        "elementId": "ZzZEuCTu98bsHpdh971eD",
+        "focus": -0.9970775485068031,
+        "gap": 18
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "oS99fRb6G_H4DwqW6Mva3",
+      "type": "text",
+      "x": 386,
+      "y": 717,
+      "width": 1068.039306640625,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 2129805896,
+      "version": 197,
+      "versionNonce": 2055741000,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745864325306,
+      "link": null,
+      "locked": false,
+      "text": "Caching and Chunk Guidance for Angular:\n    - Everything you serve from the application EXCEPT the index.html should have a cache header of 1 year.\n    - index.html should have a NO-CACHE header.",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Caching and Chunk Guidance for Angular:\n    - Everything you serve from the application EXCEPT the index.html should have a cache header of 1 year.\n    - index.html should have a NO-CACHE header.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "MOQg6HvZyPsE9WKufrGgl",
+      "type": "arrow",
+      "x": 280,
+      "y": 379,
+      "width": 225,
+      "height": 7,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 683355208,
+      "version": 16,
+      "versionNonce": 2051955256,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "7cEzVkEGcr9cUsUBYGu-V"
+        }
+      ],
+      "updated": 1745864406971,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          225,
+          7
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "7cEzVkEGcr9cUsUBYGu-V",
+      "type": "text",
+      "x": 378.52001190185547,
+      "y": 370,
+      "width": 27.959976196289062,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a4",
+      "roundness": null,
+      "seed": 1561617480,
+      "version": 5,
+      "versionNonce": 191149896,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745864405246,
+      "link": null,
+      "locked": false,
+      "text": "???",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "MOQg6HvZyPsE9WKufrGgl",
+      "originalText": "???",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "W2F3bnglAecPXdQ8RqsfS",
+      "type": "line",
+      "x": 407,
+      "y": 966,
+      "width": 5,
+      "height": 223,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a5",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 984980552,
+      "version": 22,
+      "versionNonce": 535353672,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745864682161,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -5,
+          223
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "FsqarIHgvLuprAFm2Hqfe",
+      "type": "line",
+      "x": 405,
+      "y": 1190,
+      "width": 831,
+      "height": 0,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a6",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1326346312,
+      "version": 28,
+      "versionNonce": 468374088,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745864687044,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          831,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "BeLs2EwNRXBKSqtbOYie3",
+      "type": "freedraw",
+      "x": 414,
+      "y": 981,
+      "width": 259,
+      "height": 177,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a7",
+      "roundness": null,
+      "seed": 1248414024,
+      "version": 166,
+      "versionNonce": 1891343944,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1745864706387,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          21,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          26,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          33,
+          0
+        ],
+        [
+          34,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          40,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          45,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          48,
+          0
+        ],
+        [
+          51,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          56,
+          0
+        ],
+        [
+          57,
+          0
+        ],
+        [
+          58,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          63,
+          0
+        ],
+        [
+          65,
+          0
+        ],
+        [
+          66,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          68,
+          0
+        ],
+        [
+          69,
+          0
+        ],
+        [
+          70,
+          0
+        ],
+        [
+          71,
+          1
+        ],
+        [
+          71,
+          2
+        ],
+        [
+          72,
+          2
+        ],
+        [
+          74,
+          2
+        ],
+        [
+          75,
+          2
+        ],
+        [
+          76,
+          2
+        ],
+        [
+          77,
+          2
+        ],
+        [
+          78,
+          2
+        ],
+        [
+          79,
+          2
+        ],
+        [
+          81,
+          2
+        ],
+        [
+          82,
+          2
+        ],
+        [
+          83,
+          2
+        ],
+        [
+          83,
+          3
+        ],
+        [
+          84,
+          3
+        ],
+        [
+          85,
+          4
+        ],
+        [
+          86,
+          5
+        ],
+        [
+          87,
+          6
+        ],
+        [
+          88,
+          8
+        ],
+        [
+          90,
+          9
+        ],
+        [
+          91,
+          10
+        ],
+        [
+          92,
+          10
+        ],
+        [
+          93,
+          10
+        ],
+        [
+          94,
+          10
+        ],
+        [
+          95,
+          11
+        ],
+        [
+          98,
+          12
+        ],
+        [
+          101,
+          17
+        ],
+        [
+          103,
+          20
+        ],
+        [
+          105,
+          23
+        ],
+        [
+          105,
+          24
+        ],
+        [
+          106,
+          25
+        ],
+        [
+          108,
+          27
+        ],
+        [
+          110,
+          29
+        ],
+        [
+          111,
+          29
+        ],
+        [
+          113,
+          31
+        ],
+        [
+          113,
+          32
+        ],
+        [
+          114,
+          33
+        ],
+        [
+          115,
+          34
+        ],
+        [
+          119,
+          38
+        ],
+        [
+          120,
+          40
+        ],
+        [
+          122,
+          41
+        ],
+        [
+          123,
+          41
+        ],
+        [
+          124,
+          42
+        ],
+        [
+          126,
+          44
+        ],
+        [
+          128,
+          45
+        ],
+        [
+          130,
+          47
+        ],
+        [
+          130,
+          48
+        ],
+        [
+          131,
+          48
+        ],
+        [
+          131,
+          49
+        ],
+        [
+          132,
+          49
+        ],
+        [
+          132,
+          50
+        ],
+        [
+          133,
+          52
+        ],
+        [
+          134,
+          53
+        ],
+        [
+          135,
+          54
+        ],
+        [
+          136,
+          54
+        ],
+        [
+          141,
+          63
+        ],
+        [
+          142,
+          65
+        ],
+        [
+          144,
+          69
+        ],
+        [
+          146,
+          73
+        ],
+        [
+          147,
+          76
+        ],
+        [
+          148,
+          78
+        ],
+        [
+          150,
+          82
+        ],
+        [
+          151,
+          83
+        ],
+        [
+          152,
+          84
+        ],
+        [
+          154,
+          86
+        ],
+        [
+          154,
+          88
+        ],
+        [
+          155,
+          90
+        ],
+        [
+          156,
+          93
+        ],
+        [
+          156,
+          94
+        ],
+        [
+          158,
+          99
+        ],
+        [
+          160,
+          102
+        ],
+        [
+          160,
+          103
+        ],
+        [
+          162,
+          105
+        ],
+        [
+          163,
+          109
+        ],
+        [
+          166,
+          114
+        ],
+        [
+          168,
+          118
+        ],
+        [
+          168,
+          119
+        ],
+        [
+          170,
+          123
+        ],
+        [
+          171,
+          124
+        ],
+        [
+          173,
+          127
+        ],
+        [
+          174,
+          130
+        ],
+        [
+          175,
+          131
+        ],
+        [
+          176,
+          133
+        ],
+        [
+          176,
+          134
+        ],
+        [
+          177,
+          135
+        ],
+        [
+          181,
+          138
+        ],
+        [
+          182,
+          140
+        ],
+        [
+          184,
+          142
+        ],
+        [
+          186,
+          144
+        ],
+        [
+          187,
+          145
+        ],
+        [
+          188,
+          146
+        ],
+        [
+          190,
+          148
+        ],
+        [
+          192,
+          151
+        ],
+        [
+          194,
+          153
+        ],
+        [
+          197,
+          156
+        ],
+        [
+          199,
+          158
+        ],
+        [
+          203,
+          163
+        ],
+        [
+          205,
+          164
+        ],
+        [
+          206,
+          166
+        ],
+        [
+          206,
+          167
+        ],
+        [
+          208,
+          168
+        ],
+        [
+          209,
+          168
+        ],
+        [
+          211,
+          169
+        ],
+        [
+          211,
+          170
+        ],
+        [
+          215,
+          173
+        ],
+        [
+          217,
+          174
+        ],
+        [
+          217,
+          175
+        ],
+        [
+          220,
+          175
+        ],
+        [
+          222,
+          175
+        ],
+        [
+          224,
+          175
+        ],
+        [
+          227,
+          175
+        ],
+        [
+          228,
+          175
+        ],
+        [
+          229,
+          175
+        ],
+        [
+          233,
+          174
+        ],
+        [
+          235,
+          174
+        ],
+        [
+          238,
+          174
+        ],
+        [
+          243,
+          176
+        ],
+        [
+          246,
+          176
+        ],
+        [
+          249,
+          177
+        ],
+        [
+          250,
+          177
+        ],
+        [
+          251,
+          177
+        ],
+        [
+          254,
+          177
+        ],
+        [
+          255,
+          177
+        ],
+        [
+          256,
+          177
+        ],
+        [
+          259,
+          177
+        ],
+        [
+          259,
+          177
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        259,
+        177
+      ]
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
