@@ -1,7 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import {
-  Component,
   ChangeDetectionStrategy,
+  Component,
   inject,
   isDevMode,
 } from '@angular/core';
@@ -12,12 +12,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { InfoStore } from '../stores/info-store';
-import { debounce, debounceTime, tap } from 'rxjs';
+import { debounceTime, tap } from 'rxjs';
 import { DevBlockComponent } from '../../shared/components/dev-block';
-import { ContactStore } from '../services/contact-store';
-import { ContactCreateModel } from '../types';
 import { ContactListComponent } from '../components/contact-list';
+import { ContactStore } from '../services/contact-store';
+import { InfoStore } from '../stores/info-store';
+import { ContactCreateModel } from '../types';
 @Component({
   selector: 'app-demos-info',
   providers: [InfoStore],
