@@ -58,8 +58,11 @@ export const ContactStore = signalStore(
     onInit: (store) => {
       store._load();
 
-      effect(() => {
-        setInterval(() => store._load(), 5000);
+      effect((onCleanup) => {
+        const timerID = setInterval(() => store._load(), 5000);
+        onCleanup(() => {
+          clearInterval(timerID);
+        });
       });
     },
   }),
