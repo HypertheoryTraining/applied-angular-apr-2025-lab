@@ -1,11 +1,6 @@
-import { JsonPipe } from '@angular/common';
-import {
-  Component,
-  ChangeDetectionStrategy,
-  resource,
-  isDevMode,
-} from '@angular/core';
-import { DevBlockComponent } from '@app-shared/components/dev-block';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { BookListStore } from '../stores/book-store';
+import { BookDetailsComponent } from '../components/book-details';
 export type BookApiEntity = {
   author: string;
   country: string;
@@ -21,25 +16,57 @@ export type BookApiEntity = {
 @Component({
   selector: 'app-books-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DevBlockComponent, JsonPipe],
+  imports: [BookDetailsComponent],
   template: `
-    <p>Book list</p>
-
-    @defer (when isDev) {
-      <app-dev-block>
-        {{ books.isLoading() ? 'Loading...' : 'Loaded' }}
-        {{ books.error() ? books.error() : '' }}
-
-        {{ books.value() | json }}
-      </app-dev-block>
-    }
+    <p>Want To Read</p>
+    <div class="overflow-x-auto">
+      <table class="table table-zebra">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>author</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (book of store.sortedBooks(); track book.id) {
+            <tr>
+              <th>{{ book.id }}</th>
+              <td>
+                <button class="btn" onclick="openModel(book)">
+                  {{ book.title }}
+                </button>
+              </td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.year }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <dialog id="my_modal" class="modal">
+      <div class="modal-box">
+        @if (selectedBook) {
+          <app-book-details [book]="selectedBook" />
+        }
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
   `,
 
   styles: ``,
 })
 export class ListComponent {
-  isDev = isDevMode();
-  books = resource<BookApiEntity[], unknown>({
-    loader: () => fetch('/api/books').then((res) => res.json()),
-  });
+  store = inject(BookListStore);
+  selectedBook: BookApiEntity = this.store.entities()[0];
+  openModal(book: BookApiEntity) {
+    this.selectedBook = book;
+    const elem: HTMLDialogElement = document.getElementById(
+      'my_modal',
+    ) as HTMLDialogElement;
+    elem.showModal();
+  }
 }
