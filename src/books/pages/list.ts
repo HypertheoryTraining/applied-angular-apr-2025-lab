@@ -1,11 +1,12 @@
-import { JsonPipe } from '@angular/common';
 import {
   Component,
   ChangeDetectionStrategy,
-  resource,
   isDevMode,
+  inject,
 } from '@angular/core';
 import { DevBlockComponent } from '@app-shared/components/dev-block';
+import { BookStore } from '../services/book-store';
+import { SmartDatePipe } from '../pipes/smart-date-pipe';
 export type BookApiEntity = {
   author: string;
   country: string;
@@ -21,10 +22,10 @@ export type BookApiEntity = {
 @Component({
   selector: 'app-books-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DevBlockComponent, JsonPipe],
+  imports: [DevBlockComponent, SmartDatePipe],
   template: `
     <div class="overflow-x-auto">
-      <table class="table">
+      <table class="table-pin-rows table-md">
         <!-- head -->
         <thead>
           <tr>
@@ -36,12 +37,12 @@ export type BookApiEntity = {
         </thead>
         <tbody>
           <!-- row 1 -->
-          @for (book of books.value(); track book.id) {
+          @for (book of bookstore.entities().values(); track book.id) {
             <tr>
               <th>{{ book.id }}</th>
               <td>{{ book.title }}</td>
               <td>{{ book.author }}</td>
-              <td>{{ book.year }}</td>
+              <td>{{ book.year | smartDate }}</td>
             </tr>
           }
         </tbody>
@@ -50,10 +51,8 @@ export type BookApiEntity = {
 
     @defer (when isDev) {
       <app-dev-block>
-        {{ books.isLoading() ? 'Loading...' : 'Loaded' }}
-        {{ books.error() ? books.error() : '' }}
-
-        {{ books.value() | json }}
+        {{ bookstore.loading() ? 'Loading...' : 'Loaded' }}
+        {{ bookstore.error() ? bookstore.error() : '' }}
       </app-dev-block>
     }
   `,
@@ -62,7 +61,5 @@ export type BookApiEntity = {
 })
 export class ListComponent {
   isDev = isDevMode();
-  books = resource<BookApiEntity[], unknown>({
-    loader: () => fetch('/api/books').then((res) => res.json()),
-  });
+  bookstore = inject(BookStore);
 }
